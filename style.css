@@ -7,24 +7,22 @@
   --brand-color:#EF5F4C;
   --background-color:#FFFFFF;
   --surface-color:#F5F5F5;
-  --skeleton-color:#D9D9D9;
-  --shape-transparency:#FFFFFF;
   --text-color-primary:#313131;
   --text-color-secondary:#6C6C6C;
 }
 body{
-  background-color: var(--surface-color);
+  background-color: var(--background-color);
 }
 nav{
+  max-width: 1280px;
   display: flex;
   justify-content: space-between;
   padding: 20px 32px;
-  /* border: 1px solid red; */
+  margin: auto;
 }
 .logo{
   display: flex;
   gap: 8px;
-  /* border: 1px solid gray; */
 }
 .world{
   display: flex;
@@ -49,14 +47,10 @@ nav{
   font-size: 20px;
 }
 .menu{
-  /* border:1px solid green; */
   display: flex;
   justify-content: center;
   align-items: center;
   gap:16px;
-}
-.menu>*{
-  /* border: 1px solid blue; */
 }
 .menu span{
   line-height: 150%;
@@ -69,25 +63,27 @@ nav{
   width: 40px;
 }
 
-/* HEADER */
+
 header{
+  width: 1280px;
+  margin: auto;
   display: flex;
   font-family: "Poppins", sans-serif;
   justify-content: space-between;
+  padding: 32px;
+  align-items: center;
 }
 section{
   display: flex;
 }
 #description{
-  padding: 32px;
   display: flex;
   gap: 32px;
-  width: 600px;/*remover antes de continuar*/
 }
 #content{
   gap:8px;
+  max-width: 384px;
 }
-
 #header_profile{
   width: 176px;
   height: 176px;
@@ -99,7 +95,73 @@ h1{
   line-height: 125%;
 }
 p{
+  margin-top: 8px;
   line-height: 170%;
   font-size: 14px;
   color: var(--text-color-secondary);
+  padding-right: 12px ;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  list-style:none;
+  padding-left: 0;
+  gap: 16px;
+  width: 280px;
+}
+li{
+  display: flex;
+  align-items: center;
+  gap:8px;
+}
+li::before{
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+li:nth-child(1)::before{
+  background-image: url("./assets/icons/MapPin.svg");
+}
+li:nth-child(2)::before{
+  background-image: url("./assets/icons/AirplaneTilt.svg");
+}
+li:nth-child(3)::before{
+  background-image: url("./assets/icons/Image.svg");
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:24px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 24px 32px;
+}
+main>img{
+  width: 286px;
+}
+footer{
+  max-width: 1280px;
+  margin: auto;
+  padding: 24px 32px;
+  color: var(--text-color-secondary);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  gap:16px;
+}
+footer>span{
+  line-height: 150%;
+  font-size: 14px;
+}
+footer>div{
+  display: flex;
+  gap:16px;
+  line-height: 150%;
+  font-size: 14px;
 }
