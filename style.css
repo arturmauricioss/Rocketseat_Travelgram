@@ -12,17 +12,25 @@
 }
 body{
   background-color: var(--background-color);
+  min-width: 200px;
+}
+#backlike{
+  width: 100%;
+  background-color: var(--surface-color);
 }
 nav{
+  width: 100%;
   max-width: 1280px;
   display: flex;
-  justify-content: space-between;
-  padding: 20px 32px;
-  margin: auto;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  padding: 20px 10px;
 }
 .logo{
   display: flex;
   gap: 8px;
+  width: 100%;
+  justify-content: center;
 }
 .world{
   display: flex;
@@ -48,22 +56,56 @@ nav{
 }
 .menu{
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  gap:12px;
+  max-width: 500px;
+  margin-top: 12px;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.menu>*{
+  display: block;
+  width: 80px;
+  text-align: center;
+}
+#search{
+  display: flex;
+}
+#profi_cont{
+  display: none;
+  height: 40px;
+}
+.profile{
+  width: 40px;
+  
+}
+
+/* .menu{
+  
+  width: 200px;
+  padding: 4px;
+  
+  
+  gap: 4px;
+  margin-top: 8px;
+  margin: auto;
   gap:16px;
+  padding-right: 24px;
 }
 .menu span{
   line-height: 150%;
+  font-size: 10px;
   font-family: "Poppins", sans-serif;
 }
-.menu span, #search{
+.menu span, #search,img{
   padding: 4px;
 }
 .profile{
   width: 40px;
-}
+} */
 
-
+/* 
 header{
   width: 1280px;
   margin: auto;
@@ -164,4 +206,39 @@ footer>div{
   gap:16px;
   line-height: 150%;
   font-size: 14px;
+}
+  */
+
+@media (min-width:350px) {
+  .menu{
+    margin: 0 20px;
+  }
+  #profi_cont{
+    display: block;
+  }
+  #search{
+    display: inline-block;
+  }
+}
+@media (min-width:500px) {
+  nav{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 32px;
+    margin: auto;
+  }
+  .logo{
+    width: fit-content;
+  }
+  .menu{
+    margin: 0;
+    
+  }
+  .menu>*{
+    width: fit-content;
+  }
+
+  .profile{
+    width: 40px;
+  }
 }
