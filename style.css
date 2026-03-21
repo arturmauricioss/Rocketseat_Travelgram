@@ -162,20 +162,6 @@ main{
 main>img{
   width: 64px;
 }
-/*
-main{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap:24px;
-  max-width: 1280px;
-  margin: auto;
-  padding: 24px 32px;
-}
-main>img{
-  width: 286px;
-}*/
 footer{
   max-width: 1280px;
   margin: auto;
