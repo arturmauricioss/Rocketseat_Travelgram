@@ -150,76 +150,19 @@ li:nth-child(2)::before{
 li:nth-child(3)::before{
   background-image: url("./assets/icons/Image.svg");
 }
-
-/* 
-header{
-  width: 1280px;
+main{
+  display: flex;
+  flex-wrap: wrap;
+  padding:16px;
+  justify-content: center;
+  gap:8px;
+  max-width: 1280px;
   margin: auto;
-  display: flex;
-  font-family: "Poppins", sans-serif;
-  justify-content: space-between;
-  padding: 32px;
-  align-items: center;
 }
-section{
-  display: flex;
+main>img{
+  width: 64px;
 }
-#description{
-  display: flex;
-  gap: 32px;
-}
-#content{
-  gap:8px;
-  max-width: 384px;
-}
-#header_profile{
-  width: 176px;
-  height: 176px;
-}
-h1{
-  color: var(--text-color-primary);
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 125%;
-}
-p{
-  margin-top: 8px;
-  line-height: 170%;
-  font-size: 14px;
-  color: var(--text-color-secondary);
-  padding-right: 12px ;
-}
-ul{
-  display: flex;
-  flex-direction: column;
-  list-style:none;
-  padding-left: 0;
-  gap: 16px;
-  width: 280px;
-}
-li{
-  display: flex;
-  align-items: center;
-  gap:8px;
-}
-li::before{
-  content: "";
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-li:nth-child(1)::before{
-  background-image: url("./assets/icons/MapPin.svg");
-}
-li:nth-child(2)::before{
-  background-image: url("./assets/icons/AirplaneTilt.svg");
-}
-li:nth-child(3)::before{
-  background-image: url("./assets/icons/Image.svg");
-}
-
+/*
 main{
   display: flex;
   flex-wrap: wrap;
@@ -232,7 +175,7 @@ main{
 }
 main>img{
   width: 286px;
-}
+}*/
 footer{
   max-width: 1280px;
   margin: auto;
@@ -240,8 +183,10 @@ footer{
   color: var(--text-color-secondary);
   font-family: "Poppins", sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap:16px;
+  text-align: center;
 }
 footer>span{
   line-height: 150%;
@@ -252,8 +197,9 @@ footer>div{
   gap:16px;
   line-height: 150%;
   font-size: 14px;
+  flex-direction: column;
 }
-  */
+
 
 @media (min-width:350px) {
   .menu{
@@ -265,12 +211,19 @@ footer>div{
   #search{
     display: inline-block;
   }
+  footer>div{
+    flex-direction: row;
+    justify-content: center;
+  }
 
 }
 @media (min-width:400px) {
   ul{
     flex-direction: row;
     gap:18px;
+  }
+  main>img{
+    width: 128px;
   }
 }
 
@@ -296,6 +249,9 @@ footer>div{
   .profile{
     width: 40px;
   }
+  footer{
+    flex-direction: row;
+  }
 }
 @media (min-width:720px) {
   #description{
@@ -311,4 +267,32 @@ footer>div{
     justify-content:center;
     align-items: center;
   }
+  main{
+    gap: 16px;
+  }
+  main>img{
+    width: 256px;
+  }
 }
+@media (min-width:1020px){
+  header{
+   display: flex;
+   justify-content:space-around;
+   align-items: center;
+   margin: auto;
+   max-width: 1280px;
+  }
+  #description{
+    margin: 0;
+  }
+  ul{
+    flex-direction: column;
+    width: 280px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  p{
+    font-size: 14px;
+  }
+} 
